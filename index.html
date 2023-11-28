@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>My Document</title>
+
+	<link rel="stylesheet" href="/style.css">
+	<script src=" https://cdn.jsdelivr.net/npm/p5@1.8.0/lib/p5.min.js "></script>
+</head>
+<body>
+	<div id="sketch"></div>
+	<main>
+		<header>
+			<h1>My awesome page</h1>
+		</header>
+		<h2>Hello WEB</h2>
+		<img src="http://placekitten.com/200/300" alt="">
+		<p>
+		<a href="https://hbk-bs.de">Lorem ipsum</a> dolor sit amet <strong>consectetur</strong> adipisicing elit. Dolor sapiente officiis alias praesentium architecto recusandae? Magnam, vero eum! Voluptas, ab quis fugiat odio placeat itaque cum laboriosam amet optio facere.
+		<em>Lorem ipsum dolor sit amet consectetur adipisicing elit.</em> Delectus, praesentium fugiat rerum, nostrum eum ipsa obcaecati molestias saepe necessitatibus perspiciatis in aliquid eveniet? Maiores corrupti sed asperiores fuga odit iste.
+		Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, ratione voluptates? Dolor aperiam officia ducimus temporibus totam natus repellat non, in corrupti voluptates blanditiis consequuntur sint. Mollitia nemo eveniet eos? <code>console.log("Hello world")</code></p>
+		<ol>
+		<li>Lorem ipsum dolor </li>
+		<li>Lorem ipsum dolor </li>
+		<li>Lorem ipsum dolor </li>
+		<li>Lorem ipsum dolor </li>
+		</ol>
+		<pre>
+		<code>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quibusdam.
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quibusdam.
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quibusdam.
+		</code>
+		</pre>
+	</main>
+<script>
+	function windowResized() {
+  resizeCanvas(windowWidth, windowHeight/3);
+}
+
+function setup() {
+	const canvas = createCanvas(windowWidth, windowHeight/3);
+	canvas.parent('sketch');
+	window.onblur = () => noLoop();
+	window.onfocus = () => loop();
+
+
+  }
+
+  function draw() {
+    background(255);
+    noStroke();
+    fill(0);
+    rect(0, 0, width, height);
+		fill(255);
+		circle(random(width), random(height), 10);
+  }
+</script>
+</body>
+</html>
